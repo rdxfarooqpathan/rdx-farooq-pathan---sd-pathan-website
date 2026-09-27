@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RDX FAROOQ PATHAN & SD PATHAN | Official Website</title>
+
+<meta name="description" content="RDX FAROOQ PATHAN & SD PATHAN - B.A. Student and Computer Learner">
+<meta name="keywords" content="rdxfarooqpathan, RDX FAROOQ PATHAN, SD PATHAN, Farooq Pathan">
+<meta name="author" content="RDX FAROOQ PATHAN">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#00eaff;
+    filter:blur(180px);
+    opacity:.12;
+    top:-150px;
+    left:-150px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#a000ff;
+    filter:blur(180px);
+    opacity:.12;
+    bottom:-150px;
+    right:-150px;
+    z-index:-1;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,8,22,.8);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.1);
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#00eaff;
+    text-shadow:0 0 15px #00eaff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00eaff;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 60px;
+}
+
+.hero-content{
+    max-width:950px;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 20px;
+    border:1px solid #00eaff;
+    border-radius:50px;
+    color:#00eaff;
+    margin-bottom:25px;
+    box-shadow:0 0 20px rgba(0,234,255,.2);
+}
+
+.hero h1{
+    font-size:clamp(42px,8vw,90px);
+    line-height:1;
+    font-weight:900;
+    background:linear-gradient(
+        90deg,
+        #00eaff,
+        white,
+        #a000ff,
+        #00eaff
+    );
+    background-size:300%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:gradient 5s linear infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0%}
+    100%{background-position:300%}
+}
+
+.hero h2{
+    margin-top:22px;
+    color:#ddd;
+}
+
+.hero p{
+    max-width:700px;
+    margin:20px auto;
+    color:#aaa;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    margin:8px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary{
+    background:#00eaff;
+    color:#001018;
+}
+
+.secondary{
+    border:1px solid #00eaff;
+    color:#00eaff;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* SECTIONS */
+section{
+    padding:90px 7%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:45px;
+}
+
+.title span{
+    color:#00eaff;
+}
+
+.card{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:30px;
+    backdrop-filter:blur(12px);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#00eaff;
+}
+
+/* PROFILE */
+.profile{
+    max-width:950px;
+    margin:auto;
+}
+
+.profile p{
+    color:#bbb;
+    line-height:1.9;
+    margin:10px 0;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:18px;
+    margin-top:25px;
+}
+
+.info-box{
+    background:rgba(255,255,255,.04);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.info-box strong{
+    display:block;
+    color:#00eaff;
+    margin-bottom:8px;
+}
+
+/* COURSES */
+.grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+}
+
+.course h3{
+    color:#00eaff;
+    margin-bottom:12px;
+    font-size:21px;
+}
+
+.course p{
+    color:#aaa;
+    line-height:1.6;
+}
+
+/* LOVE */
+.love{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.heart{
+    font-size:70px;
+    animation:heart 1.2s infinite;
+}
+
+@keyframes heart{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.15)}
+}
+
+.love h2{
+    color:#ff4f81;
+    margin:15px 0;
+}
+
+.love p{
+    color:#aaa;
+}
+
+/* CONTACT */
+.contact{
+    max-width:900px;
+    margin:auto;
+}
+
+.contact-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.contact-item{
+    padding:20px;
+    background:rgba(255,255,255,.04);
+    border-radius:15px;
+}
+
+.contact-item strong{
+    display:block;
+    color:#00eaff;
+    margin-bottom:8px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+footer span{
+    color:#00eaff;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    nav .links{
+        display:none;
+    }
+
+    nav{
+        padding:16px 5%;
+    }
+
+    section{
+        padding:70px 5%;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .title{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">RDX × SD</div>
+
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#relationship">Special</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ✦ Welcome To My Official Website
+        </div>
+
+        <h1>RDX FAROOQ PATHAN</h1>
+
+        <h2>& SD PATHAN</h2>
+
+        <p>
+            B.A. Student • Computer Learner • Technology Enthusiast
+        </p>
+
+        <div>
+            <a href="#about" class="btn primary">
+                Explore Me
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Contact
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<h2 class="title">
+    About <span>Me</span>
+</h2>
+
+<div class="profile card">
+
+    <p>
+        Hello! I'm <b>RDX FAROOQ PATHAN</b>.
+        I am currently pursuing my B.A. and developing my
+        computer and technical skills.
+    </p>
+
+    <p>
+        I am interested in computers, technology, web development,
+        programming and learning new digital skills.
+    </p>
+
+    <div class="info">
+
+        <div class="info-box">
+            <strong>👤 Full Name</strong>
+            RDX FAROOQ PATHAN
+        </div>
+
+        <div class="info-box">
+            <strong>💙 Special Name</strong>
+            SD PATHAN
+        </div>
+
+        <div class="info-box">
+            <strong>🎂 Date of Birth</strong>
+            16 March 2008
+        </div>
+
+        <div class="info-box">
+            <strong>🎓 Education</strong>
+            B.A. Student
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+
+<h2 class="title">
+    My <span>Education & Courses</span>
+</h2>
+
+<div class="grid">
+
+    <div class="card course">
+        <h3>🎓 B.A.</h3>
+        <p>
+            Currently pursuing Bachelor of Arts (B.A.).
+        </p>
+    </div>
+
+    <div class="card course">
+        <h3>💻 ADCA</h3>
+        <p>
+            Advanced Diploma in Computer Applications.
+        </p>
+    </div>
+
+    <div class="card course">
+        <h3>🖥️ CTTC</h3>
+        <p>
+            Computer and technical skills course.
+        </p>
+    </div>
+
+    <div class="card course">
+        <h3>📊 Tally</h3>
+        <p>
+            Learning Tally and accounting-related computer skills.
+        </p>
+    </div>
+
+    <div class="card course">
+        <h3>📈 Advanced Excel</h3>
+        <p>
+            Learning advanced spreadsheet and Excel skills.
+        </p>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- SPECIAL -->
+<section id="relationship">
+
+<h2 class="title">
+    My <span>Special Person</span>
+</h2>
+
+<div class="love card">
+
+    <div class="heart">❤️</div>
+
+    <h2>My Jaan — SDK</h2>
+
+    <p>
+        Someone special who holds a special place in my heart.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<h2 class="title">
+    Contact <span>Me</span>
+</h2>
+
+<div class="contact card">
+
+    <div class="contact-box">
+
+        <div class="contact-item">
+            <strong>📱 Phone</strong>
+            9570438124
+        </div>
+
+        <div class="contact-item">
+            <strong>📧 E-Mail</strong>
+            rdxroyalkingzishanfaruqe@gmail.com
+        </div>
+
+        <div class="contact-item">
+            <strong>📍 Address</strong>
+            Tajpur, District Samastipur,
+            Bihar - 848130
+        </div>
+
+        <div class="contact-item">
+            <strong>🎓 Education</strong>
+            B.A. Student
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026
+    <span>RDX FAROOQ PATHAN & SD PATHAN</span>
+    <br><br>
+    Made with ❤️
+
+</footer>
+
+</body>
+</html>
